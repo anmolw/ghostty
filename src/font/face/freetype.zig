@@ -318,8 +318,8 @@ pub const Face = struct {
 
             // use options from config
             .no_hinting = !self.load_flags.hinting,
-            .force_autohint = !self.load_flags.@"force-autohint",
-            .monochrome = !self.load_flags.monochrome,
+            .force_autohint = self.load_flags.@"force-autohint",
+            .monochrome = self.load_flags.monochrome,
             .no_autohint = !self.load_flags.autohint,
         });
         const glyph = self.face.handle.*.glyph;
